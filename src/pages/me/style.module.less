@@ -1,0 +1,64 @@
+.me {
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+  overflow: hidden;
+  background-image: url('../../assets/me-bg.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  padding: 40px 14px 28px;
+  color: #041237;
+  font-weight: 500;
+  font-size: 18px;
+
+  .avatar {
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    margin-right: 18px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.menus {
+  padding: 0 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(13, 58, 91, 0.07);
+
+  .menuItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &Left {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 38px;
+        height: 38px;
+        margin-right: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.loginPage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    position: relative;
+    width: 347px;
+    height: 388px;
+    margin: auto;
+    margin-top: 70px;
+    padding: 32px 18px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 7px rgba(99, 111, 152, 0.2);
+
+    .name {
+      margin-bottom: 42px;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    :global {
+      .adm-list-item-content {
+        border-top: none;
+        border-bottom: 1px solid rgb(238, 238, 238);
+      }
+    }
+  }
+}
+
+.bottomLine {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  left: 0;
+  z-index: 10;
+  width: calc(100% - 64px);
+  margin: auto;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  & > div {
+    position: relative;
+    top: -12px;
+    display: inline-block;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.25);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    background-color: #fff;
+  }
+}

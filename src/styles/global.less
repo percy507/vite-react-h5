@@ -1,0 +1,127 @@
+:root {
+  --h5-color: rgba(0, 0, 0, 0.85);
+  --h5-font-size: 16px;
+  --h5-font-family: -apple-system, blinkmacsystemfont, 'Helvetica Neue', arial,
+    'PingFang SC', 'Hiragino Sans GB', stheiti, 'Microsoft YaHei', 'Microsoft JhengHei',
+    'Source Han Sans SC', 'Noto Sans CJK SC', 'Source Han Sans CN', 'Noto Sans SC',
+    'Source Han Sans TC', 'Noto Sans CJK TC', 'WenQuanYi Micro Hei', simsun, sans-serif;
+
+  // layout sizing
+  --h5-navbar-height: 48px; // 顶部导航栏高度
+  --h5-tabbar-height: 50px; // 底部菜单栏高度
+  --h5-bar-box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--h5-color);
+  font-weight: 400;
+  font-size: var(--h5-font-size);
+  font-family: var(--h5-font-family);
+  line-height: 1.5;
+  text-rendering: optimizespeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/****************************************************************
+* rewrite antd-mobile styles
+*****/
+
+:root:root {
+  --adm-color-text: var(--h5-color);
+  --adm-font-size-main: var(--adm-font-size);
+  --adm-font-family: var(--h5-font-family);
+  --adm-color-primary: #2153d3;
+  --adm-tag-border-radius: 4px;
+
+  .ant-upload-list-item-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .adm-list-header {
+    color: rgba(0, 0, 0, 0.85) !important;
+    font-weight: 500;
+    font-size: 16px !important;
+  }
+
+  .adm-form-item-label {
+    color: rgba(0, 0, 0, 0.85) !important;
+    font-size: 14px !important;
+  }
+
+  .adm-form-item-child-inner {
+    color: rgba(0, 0, 0, 0.65) !important;
+    font-size: 14px !important;
+  }
+
+  .adm-list-item-description {
+    font-size: 12px !important;
+  }
+
+  .adm-form-item.adm-form-item-horizontal .adm-list-item-content-extra {
+    flex: none;
+    align-self: unset;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .adm-input-element {
+    color: rgba(0, 0, 0, 0.65) !important;
+    font-size: 14px !important;
+  }
+
+  .adm-text-area-count,
+  .adm-text-area-element {
+    font-size: 14px !important;
+  }
+
+  .adm-button {
+    height: 40px !important;
+    font-size: 14px !important;
+  }
+
+  .adm-modal-button {
+    line-height: 14px !important;
+  }
+
+  .adm-checkbox {
+    --font-size: 14px !important;
+  }
+
+  .adm-tag {
+    border: none !important;
+  }
+
+  .adm-toast-mask .adm-toast-main {
+    max-width: 250px !important;
+  }
+
+  .adm-pull-to-refresh-head-content {
+    font-size: 14px;
+  }
+}

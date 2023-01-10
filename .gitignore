@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+*.log*
+*.local
+
+.DS_Store
+node_modules
+dist
+dist-ssr
+
+public/build.json

@@ -1,0 +1,78 @@
+{
+  "name": "vite-react-h5",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://vite-react-h5.vercel.app/",
+  "scripts": {
+    "prepare": "husky install .husky",
+    "preinstall": "npx only-allow pnpm",
+    "dev": "cross-env VITE_MODE=local vite",
+    "build:dev": "tsc && cross-env VITE_MODE=dev vite build",
+    "build:test": "tsc && cross-env VITE_MODE=test vite build",
+    "build:prod": "tsc && cross-env VITE_MODE=prod vite build",
+    "preview": "pnpm build:dev && vite preview",
+    "lint": "pnpm lint:jsFix && pnpm lint:styleFix && pnpm lint:format",
+    "lint:jsFix": "eslint --ext .jsx,.js,.ts,.tsx --fix ./src",
+    "lint:format": "prettier --loglevel warn --write \"./src/**/*.{js,jsx,ts,tsx,css,less,md,json}\"",
+    "lint:styleFix": "stylelint --fix ./src/**/*?\\(.module\\).{css,less} ",
+    "type-check": "tsc"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx},!public/**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,less},!public/**/*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{md,json}": "prettier --write"
+  },
+  "dependencies": {
+    "@stitches/react": "^1.2.8",
+    "antd-mobile": "^5.20.0",
+    "antd-mobile-icons": "^0.3.0",
+    "clsx": "^1.2.1",
+    "dayjs": "^1.11.4",
+    "jotai": "^1.6.4",
+    "nanoevents": "^7.0.1",
+    "nanoid": "^4.0.0",
+    "normalize.css": "^8.0.1",
+    "qss": "^2.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@types/node": "^17.0.23",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "@vitejs/plugin-legacy": "^1.5.1",
+    "@vitejs/plugin-react": "^1.0.7",
+    "autoprefixer": "^10.4.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.1",
+    "less": "^4.1.2",
+    "lint-staged": "^12.3.4",
+    "postcss-less": "^6.0.0",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.5.1",
+    "stylelint": "^14.5.3",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-order": "^5.0.0",
+    "typescript": "^4.6.4",
+    "vconsole": "^3.14.6",
+    "vite": "^2.9.13"
+  }
+}
